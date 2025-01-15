@@ -19,5 +19,28 @@ describe("Testing convertToReadableString and addCommas functions", () => {
   });
 });
 
+const listOfExpectedStartIndices = [0,0,0,0,0,1,1,0,1];
 
+describe("Testing getStartIndex function", () => {
+  test("getStartIndex is a function", () => {
+    expect(typeof getStartIndex).toBe("function");
+  });
+  test("getStartIndex works as intended", () => {
+    for (const [index, input] of listOfInputs.entries()) {
+      expect(getStartIndex(input.toString())).toBe(listOfExpectedStartIndices[index]);
+    }
+  });
+});
 
+const listOfExpectedEndIndices = [3, 4, 7, 10, 1, 3, 5, 5, 8];
+
+describe("Testing getEndIndex function", () => {
+  test("getEndIndex is a function", () => {
+    expect(typeof getEndIndex).toBe("function");
+  });
+  test("getEndIndex works as intended", () => {
+    for (const [index, input] of listOfInputs.entries()) {
+      expect(getEndIndex(input.toString())).toBe(listOfExpectedEndIndices[index]);
+    }
+  });
+});

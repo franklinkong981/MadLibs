@@ -1,4 +1,4 @@
-/*Takes in a number and converts it into a string formatted with commas for readability.*/
+/*TOP-LEVEL FUNCTION: Takes in a number and converts it into a string formatted with commas for readability.*/
 function convertToReadableString(number) {
   //ensures that the input is either an integer or floating point number.
   if (isNaN(number)) return "Invalid input type, must be a valid integer or floating point number";
