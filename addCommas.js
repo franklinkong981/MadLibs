@@ -26,4 +26,15 @@ function addCommas(numberString) {
   return formattedNumberString;
 }
 
+/*Find the first index in the range of the number string where we can insert commas, which is index 1 if the first character is a negative sign, 0 otherwise. */
+function getStartIndex(numberString) {
+  return (numberString.charAt(0) === "-") ? 1 : 0;
+}
+
+/*Find the last index in the range of the number string where we can insert commas, which is either the index of the decimal point or the end of the string. */
+function getEndIndex(numberString) {
+  const decimalIndex = numberString.indexOf(".");
+  return (decimalIndex === -1) ? numberString.length : decimalIndex;
+}
+
 module.exports = convertToReadableString, addCommas, getStartIndex, getEndIndex;
