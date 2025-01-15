@@ -7,10 +7,23 @@ function convertToReadableString(number) {
     return "Invalid input, must be a valid integer or floating-point number";
   }
 
-  //If decimal, start at decimal point and work backwards, inserting comma every 3 digits. If whole number, start at end and work backwards.
   return addCommas(number.toString());
 }
 
+/*Takes in a string representation of a number and adds a comma every 3 digits before the end of the number or the decimal point. */
+function addCommas(numberString) {
+  const startIndex = getStartIndex(numberString);
+  const endIndex = getEndIndex(numberString);
+  //if non-decimal point is less than 4 digits, no commas are needed.
+  if (endIndex - startIndex <= 3) return numberString;
 
+  let formattedNumberString = numberString;
+  //start at endIndex and work backwards to startIndex, adding a comma every 3 digits.
+  for (let currentIndex = endIndex - 3; currentIndex > startIndex; currentIndex -= 3) {
+    formattedNumberString = `${formattedNumberString.slice(0, currentIndex)},${formattedNumberString.slice(currentIndex)}`;
+  }
 
-module.exports = convertToReadableString;
+  return formattedNumberString;
+}
+
+module.exports = convertToReadableString, addCommas, getStartIndex, getEndIndex;
