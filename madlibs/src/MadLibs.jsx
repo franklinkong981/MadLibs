@@ -6,7 +6,7 @@ const MadLibs = () => {
   const [MadLibsValues, setMadLibsValues]= useState({});
 
   const submitMadLibs = (values) => {
-    setMadLibsValues(values);
+    setMadLibsValues(madLibsValues => values);
   };
 
   return (
