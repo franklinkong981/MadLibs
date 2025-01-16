@@ -20,7 +20,7 @@ const MadLibs = () => {
     <div className="MadLibs">
       <h1 className="MadLibs-header">MADLIBS!</h1>
       {isFormSubmitted ? (
-        <MadLibsStory story={madLibsStory} reset={toggleIsFormSubmitted}/>
+        <MadLibsStory story={madLibsStory}/>
       ) : (
         <MadLibsForm listOfInputs={listOfInputs} submitMadLibs={submitMadLibs}/>
       )}
