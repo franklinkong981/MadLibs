@@ -2,10 +2,9 @@ import React from "react";
 import {v4 as uuid} from "uuid";
 import {useFormik} from "formik";
 
-import {listOfInputs} from "./MadLibsVariables.js";
 import {buildInitialFormValues} from "./helpers.js";
 
-const MadLibsForm = ({submitMadLibs}) => {
+const MadLibsForm = ({listOfInputs, submitMadLibs}) => {
   const formik = useFormik({
     initialValues: buildInitialFormValues(listOfInputs),
     onSubmit: values => {
@@ -15,6 +14,7 @@ const MadLibsForm = ({submitMadLibs}) => {
 
   return (
     <form className="MadLibsForm" onSubmit={formik.handleSubmit}>
+      <h2 className="MadLibsForm-instructions">Fill out each field in the form below to generate a MadLibs Story!</h2>
       {listOfInputs.map(input => (
         <div className="MadLibsForm-field">
           <label htmlFor={`MadLibsForm-${input.inputName}-input`} className="MadLibsForm-label">{input.label}</label>
