@@ -24,7 +24,7 @@ const MadLibsForm = ({listOfInputs, submitMadLibs}) => {
 
   return (
     <form className="MadLibsForm" onSubmit={formik.handleSubmit}>
-      <h2 className="MadLibsForm-instructions">Fill out each field in the form below to generate a MadLibs Story!</h2>
+      <h2 className="MadLibsForm-instructions">Fill out each field in the form below to generate a funny sentence!</h2>
       {listOfInputs.map(input => (
         <div className="MadLibsForm-field">
           <label htmlFor={`MadLibsForm-${input.inputName}-input`} className="MadLibsForm-label">{input.label}</label>

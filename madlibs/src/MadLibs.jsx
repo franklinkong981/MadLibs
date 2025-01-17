@@ -16,11 +16,15 @@ const MadLibs = () => {
     toggleIsFormSubmitted();
   };
 
+  const restart = () => {
+    toggleIsFormSubmitted();
+  }
+
   return (
     <div className="MadLibs">
       <h1 className="MadLibs-header">MADLIBS!</h1>
       {isFormSubmitted ? (
-        <MadLibsStory values={madLibsValues} listOfInputs={listOfInputs} restOfStory={restOfStory}/>
+        <MadLibsStory values={madLibsValues} listOfInputs={listOfInputs} restOfStory={restOfStory} restart={restart}/>
       ) : (
         <MadLibsForm listOfInputs={listOfInputs} submitMadLibs={submitMadLibs}/>
       )}
