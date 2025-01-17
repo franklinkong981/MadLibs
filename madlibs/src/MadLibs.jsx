@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import {buildMadLibsStory} from "./helper.js";
+import {listOfInputs, restOfStory} from "./MadLibsVariables.js";
 
 import MadLibsForm from "./MadLibsForm.jsx";
 import MadLibsStory from "./MadLibsStory.jsx";
@@ -8,11 +8,11 @@ import MadLibsStory from "./MadLibsStory.jsx";
 import useToggle from "./hooks/useToggle.jsx";
 
 const MadLibs = () => {
-  const [madLibsStory, setMadLibsStory]= useState("");
+  const [madLibsValues, setMadLibsValues] = useState({});
   const [isFormSubmitted, toggleIsFormSubmitted] = useToggle(false);
 
   const submitMadLibs = (values) => {
-    setMadLibsStory(madLibsStory => buildMadLibsStory(values));
+    setMadLibsValues(madLibsValues => values);
     toggleIsFormSubmitted();
   };
 
@@ -20,7 +20,7 @@ const MadLibs = () => {
     <div className="MadLibs">
       <h1 className="MadLibs-header">MADLIBS!</h1>
       {isFormSubmitted ? (
-        <MadLibsStory story={madLibsStory}/>
+        <MadLibsStory values={madLibsValues} listOfInputs={listOfInputs} restOfStory={restOfStory}/>
       ) : (
         <MadLibsForm listOfInputs={listOfInputs} submitMadLibs={submitMadLibs}/>
       )}

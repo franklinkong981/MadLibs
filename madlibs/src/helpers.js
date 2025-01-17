@@ -1,20 +1,19 @@
-import {listOfInputs, restOfStory} from "./MadLibsVariables.js";
-
 function buildInitialFormValues(listOfInputs) {
   const initialFormValues = {};
-  for (let input in listOfInputs) {
+  for (let input of listOfInputs) {
     initialFormValues[input.inputName] = '';
   }
   return initialFormValues;
 }
 
-function buildMadLibsStory(madLibsValues) {
+function buildMadLibsStory(madLibsValues, listOfInputs, restOfStory) {
   let madLibsStory = "";
-  for (let i = 0; i < madLibsValues.length; i++) {
-    const madLibToInsert = listOfInputs[i].inputName;
-    madLibsStory += restOfStory[i] + madLibsValues[madLibToInsert];
-    
-    if (i == restOfstory.length - 1) madLibsStory += restOfStory[i + 1];
+  for (let i = 0; i < restOfStory.length; i++) {
+    if (i == restOfStory.length - 1) madLibsStory += restOfStory[i];
+    else {
+      const madLibToInsert = listOfInputs[i].inputName;
+      madLibsStory += restOfStory[i] + madLibsValues[madLibToInsert];
+    }
   }
   return madLibsStory;
 }
