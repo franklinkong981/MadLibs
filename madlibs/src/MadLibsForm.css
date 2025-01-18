@@ -20,3 +20,7 @@
 .MadLibsForm-error {
   color: red;
 }
+
+.MadLibsForm-submit-button {
+  cursor: pointer;
+}

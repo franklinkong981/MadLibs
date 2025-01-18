@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./MadLibs.css";
 
 import {listOfInputs, restOfStory} from "./MadLibsVariables.js";
 

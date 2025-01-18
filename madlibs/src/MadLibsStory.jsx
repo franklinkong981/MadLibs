@@ -1,4 +1,5 @@
 import React from "react";
+import "./MadLibsStory.css";
 
 import {buildMadLibsStory} from "./helpers.js";
 
