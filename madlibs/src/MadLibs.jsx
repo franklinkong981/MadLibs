@@ -22,7 +22,7 @@ const MadLibs = () => {
 
   return (
     <div className="MadLibs">
-      <h1 className="MadLibs-header">MADLIBS!</h1>
+      <h1 className="MadLibs-header display-1">MADLIBS!</h1>
       {isFormSubmitted ? (
         <MadLibsStory values={madLibsValues} listOfInputs={listOfInputs} restOfStory={restOfStory} restart={restart}/>
       ) : (

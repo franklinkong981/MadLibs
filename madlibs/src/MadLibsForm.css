@@ -1,0 +1,22 @@
+.MadLibsForm{
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2%;
+  border-radius: 25px;
+}
+
+.MadLibsForm-instructions {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+
+.MadLibsForm-field {
+  text-align: left;
+}
+
+.MadLibsForm-label {
+  font-size: 24px;
+}
+
+.MadLibsForm-error {
+  color: red;
+}
