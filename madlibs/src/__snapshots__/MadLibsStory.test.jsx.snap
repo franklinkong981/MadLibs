@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test <MadLibsStory /> rendering > matches the snapshot for the MadLibsStory 1`] = `
+<DocumentFragment>
+  <div
+    class="MadLibsStory"
+  >
+    <h2
+      class="MadLibsStory-header"
+    >
+      Your MadLibs Story:
+    </h2>
+    <p
+      class="MadLibsStory-story"
+    >
+      There was a fuzzy squirrel who loved a blue wheel.
+    </p>
+    <button
+      class="MadLibsStory-restart-button"
+    >
+      Restart
+    </button>
+  </div>
+</DocumentFragment>
+`;
