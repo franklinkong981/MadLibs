@@ -1,0 +1,102 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Test <MadLibs/> rendering > matches the snapshot for the MadLibs component 1`] = `
+<DocumentFragment>
+  <div
+    class="MadLibs"
+  >
+    <h1
+      class="MadLibs-header display-1"
+    >
+      MADLIBS!
+    </h1>
+    <form
+      class="MadLibsForm"
+    >
+      <h2
+        class="MadLibsForm-instructions"
+      >
+        Fill out each field in the form below to generate a funny sentence!
+      </h2>
+      <div
+        class="MadLibsForm-field form-group"
+      >
+        <label
+          class="MadLibsForm-label"
+          for="MadLibsForm-adjective-input"
+        >
+          Enter an adjective
+        </label>
+        <input
+          class="MadLibsForm-input form-control"
+          id="MadLibsForm-adjective-input"
+          name="adjective"
+          size="50"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="MadLibsForm-field form-group"
+      >
+        <label
+          class="MadLibsForm-label"
+          for="MadLibsForm-noun-1-input"
+        >
+          Enter a noun
+        </label>
+        <input
+          class="MadLibsForm-input form-control"
+          id="MadLibsForm-noun-1-input"
+          name="noun-1"
+          size="50"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="MadLibsForm-field form-group"
+      >
+        <label
+          class="MadLibsForm-label"
+          for="MadLibsForm-color-input"
+        >
+          Enter a color
+        </label>
+        <input
+          class="MadLibsForm-input form-control"
+          id="MadLibsForm-color-input"
+          name="color"
+          size="50"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="MadLibsForm-field form-group"
+      >
+        <label
+          class="MadLibsForm-label"
+          for="MadLibsForm-noun-2-input"
+        >
+          Enter another noun
+        </label>
+        <input
+          class="MadLibsForm-input form-control"
+          id="MadLibsForm-noun-2-input"
+          name="noun-2"
+          size="50"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="MadLibsForm-submit-button btn btn-primary"
+        type="submit"
+      >
+        Generate MadLibs!
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
