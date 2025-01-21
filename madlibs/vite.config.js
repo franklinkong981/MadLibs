@@ -6,5 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000
+  },
+  test: {
+    // add the line below to add jsdom to vite
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/tests/setup.js'
   }
 });
