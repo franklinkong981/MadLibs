@@ -1,3 +1,13 @@
+/* This component is for the MadLibs form, where the list of inputs will be displayed and the user fills out an appropriate value for each.
+Implemented using Formik, user will not be able to submit the form until all fields are non-empty. The inputted values will be passed up
+to the parent MadLibs component to be stored in its madLibsValues state object. 
+
+Props: listOfInputs: An object containing the label name and the inputName (aka name attribute value) of each input field on the form.
+        submitMadLibs: The function to be run once the form is submitted that will take the inputted values and pass them up to the parent 
+        MadLibs component to be stored as state.
+        
+State: None*/
+
 import React from "react";
 import {useFormik} from "formik";
 import "./MadLibsForm.css";
@@ -16,6 +26,7 @@ const MadLibsForm = ({listOfInputs, submitMadLibs}) => {
   const formik = useFormik({
     initialValues: buildInitialFormValues(listOfInputs),
     validate,
+    //The two attributes below ensure that the validation function won't run until the user attempts to submit the form.
     validateOnChange: false,
     validateOnBlur: false,
     onSubmit: values => {
